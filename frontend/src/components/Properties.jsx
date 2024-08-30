@@ -30,7 +30,7 @@ export const Properties = () => {
       try {
         if (id) {
           const response = await fetch(
-            `http://localhost:3000/api/v2/buttons/button/${id}`
+            `https://backend-sandy-ten.vercel.app/api/v2/buttons/button/${id}`
           );
           if (!response.ok) {
             const errorText = await response.text();

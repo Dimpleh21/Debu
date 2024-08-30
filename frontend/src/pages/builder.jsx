@@ -19,7 +19,6 @@ export const Builder = () => {
     name: "Button",
     lastUpated: Date.now(),
   });
-  const handlename = () => {};
 
   useEffect(() => {
     if (id) {
@@ -27,7 +26,7 @@ export const Builder = () => {
       const fetchButton = async () => {
         try {
           const response = await fetch(
-            `http://localhost:3000/api/v2/buttons/button/${id}`
+            `https://backend-sandy-ten.vercel.app/api/v2/buttons/button/${id}`
           );
           if (!response.ok) {
             throw new Error("Failed to fetch button data");
