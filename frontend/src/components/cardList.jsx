@@ -12,7 +12,7 @@ export const CardList = () => {
     const fetchButtons = async () => {
       try {
         const response = await fetch(
-          "http://localhost:3000/api/v2/buttons/bulk",
+          "https://backend-sandy-ten.vercel.app/api/v2/buttons/bulk",
           {
             headers: {
               "Content-Type": "application/json",
@@ -55,7 +55,7 @@ export const CardList = () => {
   if (error) return <p>{error}</p>;
 
   return (
-    <div className="grid grid-cols-4 md:grid-cols-4 lg:grid-cols-5 gap-4 p-4">
+    <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 xl:grid-cols-5 gap-4 p-4">
       {buttons.length > 0 ? (
         buttons.map((button) => <Card key={button._id} buttonProps={button} />)
       ) : (

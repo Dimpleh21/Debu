@@ -8,7 +8,7 @@ const app = express();
 app.use(express.json());
 app.use(
   cors({
-    origin: "https://frontend-nzmbh6ci6-dimple-harjanis-projects.vercel.app/", // replace with your frontend domain
+    origin: "https://frontend-pi-mauve-94.vercel.app/", // replace with your frontend domain
     methods: "GET,POST,PUT,DELETE,OPTIONS", // specify allowed methods
     credentials: true, // if you're sending cookies
     allowedHeaders: ["Content-Type", "Authorization"],

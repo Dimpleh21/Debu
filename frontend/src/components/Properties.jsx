@@ -1,3 +1,4 @@
+/* eslint-disable no-unused-vars */
 import React, { useState, useEffect } from "react";
 import { useButtonContext } from "./ButtonContext";
 import { useNavigate } from "react-router-dom";
@@ -51,8 +52,8 @@ export const Properties = () => {
     try {
       const method = id ? "PUT" : "POST"; // Use PUT if ID is present, otherwise POST
       const url = id
-        ? `http://localhost:3000/api/v2/buttons/button/${id}`
-        : "http://localhost:3000/api/v2/buttons/button";
+        ? `https://backend-sandy-ten.vercel.app/api/v2/buttons/button/${id}`
+        : "https://backend-sandy-ten.vercel.app/api/v2/buttons/button";
 
       const response = await fetch(url, {
         method,
@@ -105,7 +106,7 @@ export const Properties = () => {
               type="text"
               value={newName}
               onChange={handleNameChange}
-              className="border-1 w-36 mt-2 p-1 rounded-lg"
+              className="border-2 w-36 mt-2 p-1 rounded-lg"
             />
             <button
               onClick={handleNameSave}
